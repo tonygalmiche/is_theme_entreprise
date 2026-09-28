@@ -68,10 +68,10 @@
         border-color: var(--is-theme-couleur-lisible);
     }
 
-    // Étape active de la barre d'état
-    .o_field_statusbar > .o_statusbar_status {
-        --o-statusbar-background-active: var(--is-theme-couleur-claire);
-        --o-statusbar-border-active: var(--is-theme-couleur-lisible);
+    // Étape active de la barre d'état (en v20, c'est un bouton désactivé)
+    .o_field_statusbar .o_arrow_button_current {
+        --bs-btn-disabled-bg: var(--is-theme-couleur-claire);
+        --bs-btn-disabled-border-color: var(--is-theme-couleur-lisible);
     }
 
     // En-têtes de tableaux dans les vues one2many et many2many

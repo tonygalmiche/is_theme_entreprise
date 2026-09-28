@@ -1,6 +1,6 @@
 # is_theme_entreprise
 
-Module Odoo 18 développé par [InfoSaône](http://www.infosaone.com) : couleur de l'entreprise dans l'interface et styles communs des champs, sans SCSS spécifique dans chaque module client.
+Module Odoo 20 développé par [InfoSaône](http://www.infosaone.com) : couleur de l'entreprise dans l'interface et styles communs des champs, sans SCSS spécifique dans chaque module client.
 
 Cahier des charges : `~/Documents/Développement/Documentation/modules-generiques/is_theme_entreprise.md`.
 

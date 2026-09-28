@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "InfoSaône - Couleurs de l'entreprise pour Odoo 18",
-    "version": "18.0.1.0.0",
+    "name": "InfoSaône - Couleurs de l'entreprise pour Odoo 20",
+    "version": "20.0.1.0.0",
     "author": "InfoSaône / Tony Galmiche",
     "category": "InfoSaône",
     "summary": "Couleur de l'entreprise (barre de menus, boutons, onglets, en-têtes de tableaux) et styles communs des champs",
