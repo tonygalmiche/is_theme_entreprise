@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Couleurs injectées côté serveur : en place avant le premier affichage, sans JS -->
+    <template id="webclient_bootstrap" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//t[@t-set='head_web']" position="before">
+            <t t-set="is_theme" t-value="request.env['res.company']._is_theme_valeurs()"/>
+        </xpath>
+        <xpath expr="//t[@t-set='head_web']" position="inside">
+            <style t-if="is_theme['css']" t-out="is_theme['css']"/>
+        </xpath>
+        <xpath expr="//t[@t-set='body_classname']" position="after">
+            <t t-set="body_classname" t-value="(body_classname + ' ' + is_theme['classes']).strip()"/>
+        </xpath>
+    </template>
+</odoo>

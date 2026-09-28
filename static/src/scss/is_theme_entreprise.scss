@@ -1,0 +1,88 @@
+// Les valeurs des variables --is-theme-* sont injectées par views/webclient_templates.xml
+// Les classes is_theme_actif et is_theme_label_nowrap sont ajoutées sur le <body>
+
+
+// = Styles communs, toujours actifs
+// ============================================================================
+
+// Fond gris très clair pour voir les champs à saisir
+.o_input {
+    background-color: rgb(250, 250, 250);
+}
+
+// Annulé pour les montants, sinon le montant n'est plus visible
+.o_field_monetary .o_input {
+    background-color: inherit !important;
+}
+
+// Fond gris plus foncé pour les champs obligatoires
+.o_required_modifier .o_input {
+    background-color: #dee2e6 !important;
+}
+
+// Onglets du formulaire
+.o_notebook .nav-link {
+    border-color: #dee2e6 !important;
+    color: #495057 !important;
+}
+
+
+// = Option : pas de retour à la ligne du nom des champs
+// ============================================================================
+.is_theme_label_nowrap .o_form_label {
+    white-space: nowrap;
+}
+
+
+// = Couleur de l'entreprise (uniquement si elle est saisie)
+// ============================================================================
+.is_theme_actif {
+
+    // Barre de menus (Odoo 18 expose des variables CSS pour les entrées)
+    .o_main_navbar {
+        --NavBar-entry-color: var(--is-theme-texte);
+        --NavBar-entry-color--hover: var(--is-theme-texte);
+        --NavBar-entry-color--active: var(--is-theme-texte);
+        --NavBar-brand-color: var(--is-theme-texte);
+        --NavBar-entry-backgroundColor: var(--is-theme-couleur);
+        background: var(--is-theme-couleur);
+        border-bottom-color: var(--is-theme-couleur-foncee);
+        color: var(--is-theme-texte);
+    }
+
+    // Boutons principaux (!important pour l'emporter sur les anciens styles des modules clients)
+    .btn-primary {
+        background-color: var(--is-theme-couleur) !important;
+        border-color: var(--is-theme-couleur) !important;
+        color: var(--is-theme-texte) !important;
+
+        &:hover, &:focus-visible, &:active, &.active {
+            background-color: var(--is-theme-couleur-foncee) !important;
+            border-color: var(--is-theme-couleur-foncee) !important;
+        }
+    }
+
+    // Cases à cocher, boutons radio et interrupteurs cochés
+    .form-check-input:checked {
+        background-color: var(--is-theme-couleur-lisible);
+        border-color: var(--is-theme-couleur-lisible);
+    }
+
+    // Étape active de la barre d'état
+    .o_field_statusbar > .o_statusbar_status {
+        --o-statusbar-background-active: var(--is-theme-couleur-claire);
+        --o-statusbar-border-active: var(--is-theme-couleur-lisible);
+    }
+
+    // En-têtes de tableaux dans les vues one2many et many2many
+    .o_form_view .o_field_one2many .o_list_table th,
+    .o_form_view .o_field_many2many .o_list_table th {
+        background-color: var(--is-theme-couleur-claire) !important;
+    }
+
+    // Onglet actif du notebook
+    .o_form_view .o_notebook .nav-link.active {
+        background-color: var(--is-theme-couleur-claire) !important;
+        border-color: var(--is-theme-couleur-claire) !important;
+    }
+}
